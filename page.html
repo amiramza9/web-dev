@@ -5,44 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sono:wght@300;400;500&display=swap');
+      </style>
+      <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Nav tabs -->
-    <ul class="nav nav-tabs" id="navId">
-        <li class="nav-item">
-            <a href="#tab1Id" class="nav-link active">Active</a>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-            <div class="dropdown-menu">
-                <a class="dropdown-item" href="#tab2Id">Action</a>
-                <a class="dropdown-item" href="#tab3Id">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#tab4Id">Action</a>
-            </div>
-        </li>
-        <li class="nav-item">
-            <a href="#tab5Id" class="nav-link">Another link</a>
-        </li>
-        <li class="nav-item">
-            <a href="#" class="nav-link disabled">Disabled</a>
-        </li>
-    </ul>
-    
-    <!-- Tab panes -->
-    <div class="tab-content">
-        <div class="tab-pane fade show active" id="tab1Id" role="tabpanel"></div>
-        <div class="tab-pane fade" id="tab2Id" role="tabpanel">one</div>
-        <div class="tab-pane fade" id="tab3Id" role="tabpanel">two</div>
-        <div class="tab-pane fade" id="tab4Id" role="tabpanel">three</div>
-        <div class="tab-pane fade" id="tab5Id" role="tabpanel">four</div>
-    </div>
-    
-    <script>
-        $('#navId a').click(e => {
-            e.preventDefault();
-            $(this).tab('show');
-        });
-    </script>
+    <nav class="menu-container">
+        <!-- burger menu -->
+        <input type="checkbox" aria-label="Toggle menu" />
+        <span></span>
+        <span></span>
+        <span></span>
+      
+        <!-- logo -->
+        <a href="#" class="menu-logo">
+          <img src="./logo.jpg" alt="My Awesome Website"/>
+        </a>
+      
+        <!-- menu items -->
+        <div class="menu">
+          <ul>
+            <li>
+              <a href="#home">
+                Home
+              </a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="#edu">
+                Education
+              </a>
+            </li>
+            <li>
+              <a href="#work">
+                Work Experience
+              </a>
+            </li>
+            <li>
+              <a href="#cert">
+                Certifications
+              </a>
+            </li>
+            <li>
+              <a href="#proj">
+                Projects
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <script src="./fetch.js"></script>
 </body>
 </html>
